@@ -1,5 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import CountryInformation from "./Components/countryinfo/CountryInformation";
+
 
 function App() {
 
@@ -11,20 +13,19 @@ useEffect(() => {
     .then(data => setCountry(data))
     .catch(error => console.log(error))
 }, [])
-console.log(Country)
-
   return (
     <div className="App">
-      
-      <div>
-        {Country.map((countries) => 
-          <div className="nameAndFlag">
-            <h2 className= "countriesName">{countries.name}</h2>
-            <img class="flags" src={countries.flag} alt="" />
-          </div>
-        )}
-      </div>
-
+      {/* <div>
+        <ul>
+          {Country.map((countries)=> 
+            <li>
+              <p>{countries.name}</p>
+              <img src={countries.flag} alt="" />
+            </li>
+          )}
+        </ul>
+      </div> */}
+      <CountryInformation countries = {Country}></CountryInformation>
     </div>
   );
 }
