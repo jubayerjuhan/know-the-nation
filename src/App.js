@@ -13,6 +13,8 @@ useEffect(() => {
     .then(data => setCountry(data))
     .catch(error => console.log(error))
 }, [])
+
+
   return (
     <div className="App">
       {/* <div>

@@ -1,7 +1,7 @@
 
 .nameAndimgCntnr{
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .image{
@@ -29,4 +29,8 @@ img{
 img:hover{
     -webkit-filter: blur(0);
 	filter: blur(0);  
+}
+
+h4,h5{
+    margin: 10px;
 }
