@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import CountryInformation from "./Components/countryinfo/CountryInformation";
+import JCountry from "./Components/Country/JCountry";
 
 
 function App() {
@@ -27,7 +27,10 @@ useEffect(() => {
           )}
         </ul>
       </div> */}
-      <CountryInformation countries = {Country}></CountryInformation>
+
+      {Country.map((countries) => <JCountry country = {countries} key = {countries.alpha3Code}></JCountry>)}
+
+      {/* <CountryInformation countries = {Country}></CountryInformation> */}
     </div>
   );
 }
