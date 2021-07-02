@@ -4,7 +4,7 @@ import './JCountry.css'
 const JCountry = (props) => {
     const Country = props.country;
     const {name, flag, population, capital, region, subregion} = Country;
-    console.log(Country);
+    // console.log(Country);
     const flagStyle = {height: '50px', margin: '10px', padding: '10px'};
     return (  
         <div className="JcountryDiv">
