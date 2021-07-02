@@ -14,9 +14,18 @@ useEffect(() => {
     .catch(error => console.log(error))
 }, [])
 
+const [count, setcount] = useState([])
+
+const handleAddCountry = (country) => {
+  console.log('Country Added', country);
+  const totalAddedCntry = [...count, country]
+  setcount(totalAddedCntry);
+}
 
   return (
     <div className="App">
+      <h1>Country Loaded: {Country.length}</h1>
+      <h2>Country Added: {count.length}</h2>
       {/* <div>
         <ul>
           {Country.map((countries)=> 
@@ -28,7 +37,7 @@ useEffect(() => {
         </ul>
       </div> */}
 
-      {Country.map((countries) => <JCountry country = {countries} key = {countries.alpha3Code}></JCountry>)}
+      {Country.map((countries) => <JCountry country = {countries} key = {countries.alpha3Code} handleAddCountry = {handleAddCountry}></JCountry>)}
 
       {/* <CountryInformation countries = {Country}></CountryInformation> */}
     </div>
